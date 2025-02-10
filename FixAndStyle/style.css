@@ -1,0 +1,51 @@
+
+main{
+    font-weight: bold;
+}
+
+.poisonsky {
+    background-color: #99aaff;
+}
+
+h1 {
+    color: white;
+}
+
+a {
+    color: green;
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+h2 {
+    color:blue;
+}
+
+.doctor {
+    color: orange;
+}
+
+h3 {
+    background-color: yellow;
+}
+
+.red {
+    color: red;
+}
+
+h4 {
+    color: yellow;
+    background-color: green;
+}
+
+.art {
+    background-color: lightgreen;
+}
+
+.yellow {
+    background-color: yellow;
+}
