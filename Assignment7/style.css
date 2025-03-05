@@ -1,0 +1,150 @@
+body {
+    background-color: #999999;
+}
+
+#wrapper {
+    margin: 1em auto;
+    padding: 0;
+    width: 840px;
+    border: 4px solid #0449a0;
+    background-color: #ffffff;
+}
+
+h1 {
+    background-image: linear-gradient(#0085e4,#0449a0);
+    margin: 0;
+    padding: 20px;
+}
+
+h1 a {
+    color: #57bcf4;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    font-style: italic;
+    text-decoration: none;
+}
+
+h1 a:hover {
+    color: #0449a0;
+}
+
+
+
+nav {
+    color: #57bcf4;
+    background-image: linear-gradient(#0085e4,#0449a0);
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    width: 210px;
+    border-right: solid 4px #0449a0;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+nav li a {
+    color: #57bcf4;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
+
+nav li a:hover {
+    background-image: linear-gradient(#0449a0,#0085e4);
+}
+
+.current {
+    color: white;
+}
+
+
+main {
+    padding: 0px;
+    margin: 0px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.section1 {
+    grid-column: span 4;
+    text-align: justify;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    padding: 10px;
+    background-color: #add8e6;
+}
+
+.section2 {
+    grid-column: span 8;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: normal;
+    padding: 10px;
+}
+
+.thirds {
+    grid-column: span 4;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: normal;
+    padding: 10px;
+}
+
+h2 {
+    font-family: Helvetica, Arial, sans-serif;
+    border-bottom: solid 4px #0449a0;
+    color: #0449a0;
+    margin: 0;
+    padding: 0 0 10px 0;
+}
+
+.imageleft {
+    float: left;
+    width: 350px;
+    border: solid 4px #0449a0;
+    margin: 20px 10px 10px 0px;
+}  
+
+.imageright {
+    float: right;
+    width: 350px;
+    border: solid 4px #0449a0;
+    margin: 20px 10px 10px 0px;
+} 
+
+.portrait {
+    width: 260px;
+    margin: 20px 0 0 0;
+}
+
+
+main a{
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+}
+
+main a:hover {
+    text-decoration: underline;
+    color: blue;
+}
+
+
+
+
+footer {
+    padding: 10px;
+    background-color: #d01d00;
+    border-top: solid 4px #0449a0;
+}
+
+footer img {
+    width: 250px;
+}
