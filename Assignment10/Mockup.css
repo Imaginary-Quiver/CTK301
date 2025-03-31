@@ -1,0 +1,138 @@
+body {
+  background-color: #242424;
+}
+
+#wrapper {
+  margin: 24px auto;
+  width: 1200px;
+  padding: 0;
+  background-color: #242424;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 24px;
+  grid-template-rows: 75px 60px auto; /* This is for the dummy columns, replace or delete */
+}
+
+/* style for dummy columns, delete and replace with your own CSS */
+.dummycolumn {
+  background-color: rgba(255,0,0,.25);
+  grid-column: span 1;
+}
+
+
+header {
+  grid-column: span 12;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 24pt;
+  font-weight: bolder;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+nav {
+  color: white;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  margin: 0;
+  grid-column: span 12;
+  height: 60px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  width: 296px;
+  margin-top: 1em;
+  border-top: 4px solid white;
+  border-bottom: 4px solid white;
+  border-right: 4px solid white;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+.start_nav {
+  border-left: 4px solid white;
+}
+
+
+
+nav li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16pt;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  padding: 10px;
+}
+
+nav li a:hover {
+  background-color: #606060;
+}
+
+.current {
+  background-color: #491D7F;
+}
+
+main {
+  grid-column: span 12;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  color: white;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+main section {
+  grid-column: span 12;
+}
+
+.text_section {
+  padding: 0 72px 0 72px;
+  font-weight: normal;
+  font-size: 16pt;
+}
+
+main h2 {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.project_sample {
+  display: flex;
+  column-gap: 25px;
+  padding: 0 12.5px 0 12.5px;
+}
+
+.horiz_section {
+  display: flex;
+}
+
+.left_margin {
+  margin: 0;
+  margin-left: 12px;
+}
+
+.socials {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  column-gap: 16px;
+}
+
+.s_media {
+  height: 66px;
+  width: 66px;
+}
