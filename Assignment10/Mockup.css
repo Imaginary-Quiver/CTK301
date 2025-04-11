@@ -3,28 +3,48 @@ body {
 }
 
 #wrapper {
-  margin: 24px auto;
+  margin: auto;
   width: 1200px;
   padding: 0;
   background-color: #242424;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-column-gap: 24px;
-  grid-template-rows: 75px 60px auto; /* This is for the dummy columns, replace or delete */
 }
 
-/* style for dummy columns, delete and replace with your own CSS */
-.dummycolumn {
-  background-color: rgba(255,0,0,.25);
-  grid-column: span 1;
+.spectral-regular {
+  font-family: "Spectral", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
+.spectral-bold {
+  font-family: "Spectral", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.spectral-extrabold {
+  font-family: "Spectral", serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.spectral-regular-italic {
+  font-family: "Spectral", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.spectral-bold-italic {
+  font-family: "Spectral", serif;
+  font-weight: 700;
+  font-style: italic;
+}
 
 header {
   grid-column: span 12;
-  font-family: 'Times New Roman', Times, serif;
   font-size: 24pt;
-  font-weight: bolder;
   margin: 0;
   padding: 0;
   text-align: center;
@@ -38,8 +58,6 @@ header h1 {
 
 nav {
   color: white;
-  font-family: Helvetica, Arial, sans-serif;
-  font-weight: bold;
   margin: 0;
   grid-column: span 12;
   height: 60px;
@@ -54,11 +72,10 @@ nav ul {
 nav li {
   display: inline-block;
   width: 296px;
-  margin-top: 1em;
+  margin-top: 0;
   border-top: 4px solid white;
   border-bottom: 4px solid white;
   border-right: 4px solid white;
-  font-family: 'Times New Roman', Times, serif;
 }
 
 
@@ -73,7 +90,6 @@ nav li a {
   color: white;
   text-decoration: none;
   font-size: 16pt;
-  font-weight: bold;
   text-align: center;
   display: block;
   padding: 10px;
@@ -81,6 +97,7 @@ nav li a {
 
 nav li a:hover {
   background-color: #606060;
+  transition: background-color 0.25s;
 }
 
 .current {
@@ -92,8 +109,6 @@ main {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   color: white;
-  font-family: Helvetica, Arial, sans-serif;
-  font-weight: bold;
 }
 
 main section {
@@ -102,18 +117,21 @@ main section {
 
 .text_section {
   padding: 0 72px 0 72px;
-  font-weight: normal;
   font-size: 16pt;
-}
-
-main h2 {
-  font-family: 'Times New Roman', Times, serif;
 }
 
 .project_sample {
   display: flex;
   column-gap: 25px;
   padding: 0 12.5px 0 12.5px;
+}
+
+.project_sample img {
+  border-radius: 10px;
+}
+
+.padding-seventy-two {
+  padding: 0 72px 0 72px;
 }
 
 .horiz_section {
@@ -125,6 +143,11 @@ main h2 {
   margin-left: 12px;
 }
 
+video {
+  padding: 0 0 130px 0;
+}
+
+
 .socials {
   display: grid;
   grid-template-columns: auto auto;
@@ -135,4 +158,25 @@ main h2 {
 .s_media {
   height: 66px;
   width: 66px;
+  font-size: 66px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+section div a {
+  text-decoration: none;
+  color: #FFF;
+}
+
+section div a:hover {
+  color: #491D7F;
+  transition: color 0.25s;
+}
+
+footer {
+  grid-column: span 12;
+  color:#FFF;
+  font-size: 18px;
+  text-align: center;
 }
