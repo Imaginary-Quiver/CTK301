@@ -46,7 +46,7 @@ header {
   grid-column: span 12;
   font-size: 24pt;
   margin: 0;
-  padding: 0;
+  padding: 30px;
   text-align: center;
 }
 
@@ -123,7 +123,47 @@ main section {
 .project_sample {
   display: flex;
   column-gap: 25px;
-  padding: 0 12.5px 0 12.5px;
+}
+
+#myCarousel {
+  margin-bottom: 24px;
+}
+
+.f-carousel {
+  --f-carousel-spacing: 25px;
+  --f-carousel-slide-width: calc(100%-191px);
+  padding: 10px 72.5px 0px 72.5px;
+
+  --f-carousel-slide-height: 126px;
+
+  --f-button-width: 35px;
+  --f-button-height: 126px;
+
+  --f-button-svg-width: 35px;
+  --f-button-svg-height: 1260px;
+
+  --f-button-svg-stroke-width: 10;
+}
+
+.f-carousel img {
+  width: 191px;
+  height: 126px;
+}
+
+.button_img {
+  z-index: -1;
+  position: relative;
+  pointer-events: none;
+}
+
+#myCarousel .f-carousel__slide {
+  text-align: center;
+  padding: auto;
+  background: #eee;
+}
+
+.f-carousel img {
+  width: calc(100%);
 }
 
 .project_sample img {

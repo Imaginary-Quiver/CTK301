@@ -7,6 +7,10 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.umd.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.css" /> 
+
 	<link href="Mockup.css" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -25,26 +29,35 @@
 			<section>
 				<h2 class="spectral-bold padding-seventy-two">Recent Projects</h2>
 				<div class="project_sample">
-					<img src="Images\Left.png" alt="Left">
-					<img src="Images\Projects Rectangle.png" alt="Place holder rectangle">
-					<img src="Images\Projects Rectangle.png" alt="Place holder rectangle">
-					<img src="Images\Projects Rectangle.png" alt="Place holder rectangle">
-					<img src="Images\Projects Rectangle.png" alt="Place holder rectangle">
-					<img src="Images\Projects Rectangle.png" alt="Place holder rectangle">
-					<img src="Images\Right.png" alt="Right">
+					<div id="recent-projects-carousel" class="f-carousel">
+						<!--                Template:                <div class="f-carousel__slide"><img src="" alt=" project; //24"></div>                                          -->
+						
+						<div class="f-carousel__slide"><img src="Images/Art_Projcet_Images/Grinning Order Cultist [Kard].png" alt="Grinning Order Cultist DnD Character Art; 02/23/25"></div>
+						<div class="f-carousel__slide"><img src="Images/Art_Projcet_Images/Cargethal V1.png" alt="Cargethal DnD Character Bust; 03/04/25"></div>
+						<div class="f-carousel__slide"><img src="Images/Game_Project_Images/Forsaken Seas Thumbnail.png" alt="Forsaken Seas Boardgame; 12/13/24"></div>
+						<div class="f-carousel__slide"><img src="Images/Game_Project_Images/Rubber Run Tumbnail.png" alt="Rubber Run Videogame; 12/06/24"></div>
+						<div class="f-carousel__slide"><img src="Images/Art_Projcet_Images/Terraria Boss Remix.png" alt="Terraria Boss Remix Project; 04/01/24"></div>
+						<div class="f-carousel__slide"><img src="Images/Art_Projcet_Images/Watty Vandalisim.png" alt="Watty Vandalisim Project; 03/22/24"></div>
+						<div class="f-carousel__slide"><img src="Images/Art_Projcet_Images/Deus Ex Magica.png" alt="Deus Ex Magica Dnd Character Art; 10/12/23"></div>
+						<div class="f-carousel__slide"><img src="Images/Game_Project_Images/Hex-okles Thumbnail.png" alt="Hex-okles Videogame; 6/28/23"></div>
+						<div class="f-carousel__slide"><img src="Images/Art_Projcet_Images/Fringe Flayer.png" alt="Fringe Flayer DnD Monster Art; 09/14/22"></div>
+						
+					</div>
 				</div>
 			</section>
 
 			<section>
-				<h2 class="spectral-bold padding-seventy-two">Recent Projects</h2>
+				<h2 class="spectral-bold padding-seventy-two">Featured Projects</h2>
 				<div class="project_sample">
-					<img src="Images\Left.png" alt="Left">
-					<img src="Images\Projects Rectangle.png" alt="Place holder rectangle">
-					<img src="Images\Projects Rectangle.png" alt="Place holder rectangle">
-					<img src="Images\Projects Rectangle.png" alt="Place holder rectangle">
-					<img src="Images\Projects Rectangle.png" alt="Place holder rectangle">
-					<img src="Images\Projects Rectangle.png" alt="Place holder rectangle">
-					<img src="Images\Right.png" alt="Right">
+					<div id="featured-projects-carousel" class="f-carousel">
+						<div class="f-carousel__slide"><img src="Images/Game_Project_Images/Forsaken Seas Thumbnail.png" alt="Forsaken Seas Boardgame; 12/13/24"></div>
+						<div class="f-carousel__slide"><img src="Images/Art_Projcet_Images/Grinning Order Cultist [Kard].png" alt="Grinning Order Cultist DnD Character Art; 02/23/25"></div>
+						<div class="f-carousel__slide"><img src="Images/Game_Project_Images/Hex-okles Thumbnail.png" alt="Hex-okles Videogame; 6/28/23"></div>
+						<div class="f-carousel__slide"><img src="Images/Art_Projcet_Images/Cargethal V1.png" alt="Cargethal DnD Character Bust; 03/04/25"></div>
+						<div class="f-carousel__slide"><img src="Images/Art_Projcet_Images/Fringe Flayer.png" alt="Fringe Flayer DnD Monster Art; 09/14/22"></div>
+						<div class="f-carousel__slide"><img src="Images/Art_Projcet_Images/Watty Vandalisim.png" alt="Watty Vandalisim Project; 03/22/24"></div>
+						<div class="f-carousel__slide"><img src="Images/Art_Projcet_Images/Deus Ex Magica.png" alt="Deus Ex Magica Dnd Character Art; 10/12/23"></div>
+					  </div>
 				</div>
 			</section>
 
@@ -81,5 +94,32 @@
 			<p>Coppyright</p>
 		</footer>
 	</div>
+
+	<script>
+		const container1 = document.getElementById("recent-projects-carousel");
+		const options1 = {Dots: false, Navigation : {} ,infinite: false, slidesPerPage: 5};
+		new Carousel(container1, options1);
+	</script>
+
+	<script>
+		const container2 = document.getElementById("featured-projects-carousel");
+		const options2 = {Dots: false, Navigation : {} ,infinite: false, slidesPerPage: 5};
+		new Carousel(container2, options2);
+	</script>
+
+	<script>
+		window.onload = function() {
+    
+		let left = document.getElementsByClassName('is-prev');
+		let right = document.getElementsByClassName('is-next');
+		
+		left[0].innerHTML = '<img class="button_img" src="Images/Ui_Images/Left.png" alt="Left">';
+		left[1].innerHTML = '<img class="button_img" src="Images/Ui_Images/Left.png" alt="Left">';	
+		
+		right[0].innerHTML = '<img class="button_img" src="Images/Ui_Images/Right.png" alt="Right">';
+		right[1].innerHTML = '<img class="button_img" src="Images/Ui_Images/Right.png" alt="Right">';
+
+		}
+	</script>
 </body>
 </html>
