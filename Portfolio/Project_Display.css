@@ -1,0 +1,56 @@
+
+#Project_List {
+    grid-column: span 12;
+}
+
+.project_listing{
+    margin: 2em 0;
+    padding: 0 0 0 72px;
+}
+
+.project_listing a{
+    display: flex;
+    width: auto;
+    color: white;
+    text-decoration: none;
+}
+
+.project_listing img {
+    margin: auto 1em auto 0;
+    border-radius: 10px;
+    width: 191px;
+    height: 126px;
+}
+
+.project_listing div {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-column-gap: 30px;
+    grid-row-gap: 10px;
+}
+
+.project_listing div p{
+    color: white;
+    grid-column: span 6;
+    margin: 0;
+}
+
+.project_listing div .Genres {
+    grid-column: span 12;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
