@@ -1,0 +1,6 @@
+name
+type
+genres
+medium
+05/02/25
+Hi
