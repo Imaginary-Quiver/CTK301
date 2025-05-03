@@ -1,8 +1,8 @@
-name
-type
-genres
-medium
-roles
+name2
+type2
+genres2
+medium2
+roles2
 05/02/25
 image1,image2,image3
 Nice
