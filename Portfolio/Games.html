@@ -53,11 +53,11 @@
 					<img src="" alt="">
 
 					<div class="grid">
-						<p class="Game">Game: ---</p>
-						<p class="Type">Type: ---</p>
-						<p class="Genres">Genres: ---</p>
-						<p class="Roles">Role(s): ---</p>
-						<p class="Date">Date: ---</p>
+						<p>Game: ---</p>
+						<p>Type: ---</p>
+						<p>Genres: ---</p>
+						<p>Role(s): ---</p>
+						<p>Date: ---</p>
 					</div>
 				</a></section>                ---------------------->
 
@@ -128,12 +128,16 @@
 		right[0].innerHTML = '<img class="button_img" src="Media/Ui_Images/Right.png" alt="Right">';
 
 		}
-	</script>
 
-	<script>
-		const test = new Project("Rubber Run","Video Game","Third Person, 3D, Platformer","","All(Solo Project)",new Date());
+		const test_project = new Project("Rubber Run","Video Game","Third Person, 3D, Platformer","","All(Solo Project)",new Date());
 
-		console.log(test.Generate_Listing());
+		//console.log(test_project.Generate_Listing());
+	
+		//Gather_Projects();
+
+
+		Execute_Listings("Game");
+		
 	</script>
 </body>
 </html>
