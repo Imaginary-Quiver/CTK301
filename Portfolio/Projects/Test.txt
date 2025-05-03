@@ -4,4 +4,4 @@ genres
 medium
 roles
 05/02/25
-Hi
+Hi, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam minus tempora ea quae dignissimos! Nesciunt repellat quo explicabo illum nihil praesentium suscipit, enim qui quidem consequatur dolor quasi, incidunt officia.
