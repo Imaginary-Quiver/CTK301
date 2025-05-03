@@ -4,5 +4,6 @@ genres
 medium
 roles
 05/02/25
+image1,image2,image3
 Hi, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam minus tempora ea quae dignissimos! Nesciunt repellat quo explicabo illum nihil praesentium suscipit, enim qui quidem consequatur dolor quasi, incidunt officia.
 Hi, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam minus tempora ea quae dignissimos! Nesciunt repellat quo explicabo illum nihil praesentium suscipit, enim qui quidem consequatur dolor quasi, incidunt officia.
