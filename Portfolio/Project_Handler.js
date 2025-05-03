@@ -103,11 +103,10 @@ async function Gather_Projects(){
 async function Populate_Listings(data,type) {
     
     if (data) {// Ensure that data is available before processing
-        console.log("Projects:")
+        
 
         let current_listings = [];
 
-        console.log(data);
         for (i in data) {
             if (type = "Game" && data[i].type.includes("Game")) {
                 current_listings.push(data[i]);
@@ -127,7 +126,7 @@ async function Populate_Listings(data,type) {
 
 
         let parent = document.getElementById('Project_List');
-        console.log(new_listings)
+        
         parent.innerHTML = '<h2 class="spectral-bold padding-seventy-two">Games</h2>\n\n' + new_listings.join('\n');
 
     } else {
