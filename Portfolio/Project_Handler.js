@@ -1,5 +1,5 @@
 
-let Project_Name_List = ["Test","Test2"]
+let Project_Name_List = ["Forsaken Seas","Hex-okles","Rubber Run"]
 let  Projects = [];
 
 for (i in Project_Name_List) {
@@ -45,8 +45,7 @@ class Project {
 
             listing = '<section class="text_section project_listing"><a href="#">\n'+ "\n" + '	<img src="' + this.images[0] + '" alt="' + this.name + " " + this.type + '; ' + this.date + '">\n' + "\n" + '	<div class="grid">\n' + '		<p>Game: '  +  this.name + '</p>\n' + '		<p>Type: ' + this.type + '</p>\n' + '		<p>Genres: ' + this.genres + '</p>\n' + '		<p>Role(s): ' + this.roles + '</p>\n' + '		<p>Date: ' + this.date + '</p>\n' + '	</div>\n' + '</a></section>';
 
-        }
-        if (type = "Art" && this.type.includes("Art")) {
+        }else if (type = "Art" && this.type.includes("Art")) {
             
             listing = '<section class="text_section project_listing"><a href="#">\n'+ "\n" + '	<img src="' + this.images[0] + '" alt="' + this.name + " " + this.type + '; ' + this.date + '">\n' + "\n" + '	<div class="grid">\n' + '		<p>Name: '  +  this.name + '</p>\n' + '		<p>Type: ' + this.type + '</p>\n' + '		<p>Medium: ' + this.medium + '</p>\n' + '		<p>Date: ' + this.date + '</p>\n' + '	</div>\n' + '</a></section>';
 
@@ -108,11 +107,11 @@ async function Populate_Listings(data,type) {
 
         let current_listings = [];
 
+        console.log(data);
         for (i in data) {
             if (type = "Game" && data[i].type.includes("Game")) {
                 current_listings.push(data[i]);
-            }
-            if (type = "Art" && data[i].type.includes("Art")) {
+            }else if (type = "Art" && data[i].type.includes("Art")) {
                 current_listings.push(data[i]);
             } else {
                 current_listings.push(data[i]);
