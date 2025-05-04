@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Matthew Kmitta- Games</title>
+	<title>Matthew Kmitta- Misc</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
@@ -24,19 +24,19 @@
 
 		<nav class="spectral-bold">
 			<ul>
-				<li><a class="start_nav" href="Main.html">Main</a></li><li><a class="current" href="Games.html">Games</a></li><li><a href="Art.html">Art</a></li><li class="end_nav"><a href="Misc.html">Misc</a></li>
+				<li><a class="start_nav" href="Main.html">Main</a></li><li><a href="Games.html">Games</a></li><li><a href="Art.html">Art</a></li><li class="end_nav"><a  class="current"href="Misc.html">Misc</a></li>
 			</ul>
 		</nav>
 
 		<main class="spectral-regular">
 			<section>
-				<h2 class="spectral-bold padding-seventy-two">Recent Games</h2>
+				<h2 class="spectral-bold padding-seventy-two">Recent Miscellaneous Projects</h2>
 
 				<div class="project_sample">
 					<div id="recent-projects-carousel" class="f-carousel">
 						<div class="f-carousel__viewport">
 							<div class="f-carousel__track">
-								<!--Template:                <div class="f-carousel__slide"><a href="#"><img src="" alt=" project; //25"></a></div>                --------------------------->
+								<!--Template:                <div class="f-carousel__slide"><a href="#"><img src="" alt=" project; //25"></div>                --------------------------->
 								</div>
 						  </div>
 					</div>
@@ -44,20 +44,22 @@
 			</section>
 
 			<div id="Project_List">
-				<h2 class="spectral-bold padding-seventy-two">Games</h2>
+				<h2 class="spectral-bold padding-seventy-two">Miscellaneous Projects</h2>
 
 				<!--Template:                <section class="text_section project_listing"><a href="#">
 					
 					<img src="" alt="">
 
 					<div class="grid">
-						<p>Game: ---</p>
+						<p>Name: ---</p>
 						<p>Type: ---</p>
-						<p>Genres: ---</p>
-						<p>Role(s): ---</p>
+						<p>Medium: ---</p>
 						<p>Date: ---</p>
 					</div>
 				</a></section>                ---------------------->
+
+				<section class="text_section project_listing"><a href="#">
+
 				</a></section>
 
 			</div>
@@ -95,8 +97,8 @@
 		observer.observe(document.getElementById('recent-projects-carousel'), { childList: true, subtree: true });
 
 		
-		Execute_Listings("Game");
-
+		Execute_Listings("misc");
+		
 	</script>
 </body>
 </html>

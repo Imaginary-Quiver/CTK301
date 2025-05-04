@@ -18,32 +18,25 @@
 <body>
 	<div id="wrapper">
 		<header class="spectral-extrabold">
-			<h1>Matthew Kmitta</h1>
+			<h1>Matthew Kmitta- Main</h1>
 		</header>
 
 		<nav class="spectral-bold">
 			<ul>
-				<li><a class="start_nav current" href="Main.html">Main</a></li><li><a href="Games.html">Games</a></li><li><a href="Art.html">Art</a></li><li class="end_nav"><a href="#">Misc</a></li>
+				<li><a class="start_nav current" href="Main.html">Main</a></li><li><a href="Games.html">Games</a></li><li><a href="Art.html">Art</a></li><li class="end_nav"><a href="Misc.html">Misc</a></li>
 			</ul>
 		</nav>
 
-		<main class="spectral-regular">
+		<main id="main" class="spectral-regular">
 			<section>
 				<h2 class="spectral-bold padding-seventy-two">Recent Projects</h2>
 				<div class="project_sample">
 					<div id="recent-projects-carousel" class="f-carousel">
-						<!--                Template:                <div class="f-carousel__slide"><a href="#"><img src="" alt=" project; //25"></a></div>                                          -->
-						<div class="f-carousel__slide"><a href="#"><img src="Media/Art_Project_Images/Zavel.png" alt="Zavel Dnd Character Art; 04/22/25"></a></div>
-						<div class="f-carousel__slide"><a href="#"><img src="Media/Art_Project_Images/Grinning Order Cultist [Kard].png" alt="Grinning Order Cultist DnD Character Art; 02/23/25"></a></div>
-						<div class="f-carousel__slide"><a href="#"><img src="Media/Art_Project_Images/Cargethal V1.png" alt="Cargethal DnD Character Bust; 03/04/25"></a></div>
-						<div class="f-carousel__slide"><a href="#"><img src="Media/Game_Project_Images/Forsaken Seas Thumbnail.png" alt="Forsaken Seas Boardgame; 12/13/24"></a></div>
-						<div class="f-carousel__slide"><a href="#"><img src="Media/Game_Project_Images/Rubber Run Tumbnail.png" alt="Rubber Run Videogame; 12/06/24"></a></div>
-						<div class="f-carousel__slide"><a href="#"><img src="Media/Art_Project_Images/Terraria Boss Remix.png" alt="Terraria Boss Remix Project; 04/01/24"></a></div>
-						<div class="f-carousel__slide"><a href="#"><img src="Media/Art_Project_Images/Watty Vandalisim.png" alt="Watty Vandalisim Project; 03/22/24"></a></div>
-						<div class="f-carousel__slide"><a href="#"><img src="Media/Art_Project_Images/Deus Ex Magica.png" alt="Deus Ex Magica Dnd Character Art; 10/12/23"></a></div>
-						<div class="f-carousel__slide"><a href="#"><img src="Media/Game_Project_Images/Hex-okles Thumbnail.png" alt="Hex-okles Videogame; 6/28/23"></a></div>
-						<div class="f-carousel__slide"><a href="#"><img src="Media/Art_Project_Images/Fringe Flayer.png" alt="Fringe Flayer DnD Monster Art; 09/14/22"></a></div>
-						
+						<div class="f-carousel__viewport">
+							<div class="f-carousel__track">
+								<!--Template:                <div class="f-carousel__slide"><a href="#"><img src="" alt=" project; //25"></a></div>                --------------------------->
+								</div>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -52,15 +45,11 @@
 				<h2 class="spectral-bold padding-seventy-two">Featured Projects</h2>
 				<div class="project_sample">
 					<div id="featured-projects-carousel" class="f-carousel">
-						<div class="f-carousel__slide"><a href="#"><img src="Media/Game_Project_Images/Forsaken Seas Thumbnail.png" alt="Forsaken Seas Boardgame; 12/13/24"></a></div>
-						<div class="f-carousel__slide"><a href="#"><img src="Media/Art_Project_Images/Zavel.png" alt="Zavel Dnd Character Art; 04/22/25"></a></div>
-						<div class="f-carousel__slide"><a href="#"><img src="Media/Art_Project_Images/Grinning Order Cultist [Kard].png" alt="Grinning Order Cultist DnD Character Art; 02/23/25"></a></div>
-						<div class="f-carousel__slide"><a href="#"><img src="Media/Game_Project_Images/Hex-okles Thumbnail.png" alt="Hex-okles Videogame; 6/28/23"></a></div>
-						<div class="f-carousel__slide"><a href="#"><img src="Media/Art_Project_Images/Cargethal V1.png" alt="Cargethal DnD Character Bust; 03/04/25"></a></div>
-						<div class="f-carousel__slide"><a href="#"><img src="Media/Art_Project_Images/Fringe Flayer.png" alt="Fringe Flayer DnD Monster Art; 09/14/22"></a></div>
-						<div class="f-carousel__slide"><a href="#"><img src="Media/Art_Project_Images/Watty Vandalisim.png" alt="Watty Vandalisim Project; 03/22/24"></a></div>
-						<div class="f-carousel__slide"><a href="#"><img src="Media/Art_Project_Images/Deus Ex Magica.png" alt="Deus Ex Magica Dnd Character Art; 10/12/23"></a></div>
-					  </div>
+						<div class="f-carousel__viewport">
+							<div class="f-carousel__track">
+								<!--Template:                <div class="f-carousel__slide"><a href="#"><img src="" alt=" project; //25"></a></div>                --------------------------->
+								</div>
+						</div>
 				</div>
 			</section>
 
@@ -99,30 +88,33 @@
 	</div>
 
 	<script>
-		const container1 = document.getElementById("recent-projects-carousel");
-		const options1 = {Dots: false, Navigation : {} ,infinite: false, slidesPerPage: 5};
-		new Carousel(container1, options1);
-	</script>
+		Execute_Listings("All",2,true);
 
-	<script>
-		const container2 = document.getElementById("featured-projects-carousel");
-		const options2 = {Dots: false, Navigation : {} ,infinite: false, slidesPerPage: 5};
-		new Carousel(container2, options2);
-	</script>
+		const observer = new MutationObserver((mutations) => {
+			mutations.forEach((mutation) => {				
+				if (mutation.type === 'childList') {
+					
+					mutation.addedNodes.forEach((node) => {
+						// Check if the added node is the one we are interested in
+						if (node.nodeType === Node.ELEMENT_NODE && node.classList.contains('f-carousel__nav')) {
+											
+							let left = node.getElementsByClassName('is-prev');
+							let right = node.getElementsByClassName('is-next');
+							
+							left[0].innerHTML = '<img class="button_img" src="Media/Ui_Images/Left.png" alt="Left">';	
+							
+							right[0].innerHTML = '<img class="button_img" src="Media/Ui_Images/Right.png" alt="Right">';
+						}
+					});
+				}
+			});
+		});
+		// Start observing the document body for child additions
+		observer.observe(document.getElementById('main'), { childList: true, subtree: true });
 
-	<script>
-		window.onload = function() {
-    
-		let left = document.getElementsByClassName('is-prev');
-		let right = document.getElementsByClassName('is-next');
+
 		
-		left[0].innerHTML = '<img class="button_img" src="Media/Ui_Images/Left.png" alt="Left">';
-		left[1].innerHTML = '<img class="button_img" src="Media/Ui_Images/Left.png" alt="Left">';	
 		
-		right[0].innerHTML = '<img class="button_img" src="Media/Ui_Images/Right.png" alt="Right">';
-		right[1].innerHTML = '<img class="button_img" src="Media/Ui_Images/Right.png" alt="Right">';
-
-		}
 	</script>
 </body>
 </html>
