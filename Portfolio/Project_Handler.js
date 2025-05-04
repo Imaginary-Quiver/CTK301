@@ -72,7 +72,7 @@ class Project {
             
             listing = '<section class="text_section project_listing"><a href="#">\n'+ "\n" + '	<img src="' + this.images[0] + '" alt="' + this.name + " " + this.type + '; ' + this.Get_Date() + '">\n' + "\n" + '	<div class="grid">\n' + '		<p>Name: '  +  this.name + '</p>\n' + '		<p>Type: ' + this.type + '</p>\n' + '		<p>Medium: ' + this.medium + '</p>\n' + '		<p>Date: ' + this.Get_Date() + '</p>\n' + '	</div>\n' + '</a></section>';
 
-        } else if (!data[i].type.includes("Game") && !data[i].type.includes("Art")){
+        } else if (type == "Misc"){
             
             listing = '<section class="text_section project_listing"><a href="#">\n'+ "\n" + '	<img src="' + this.images[0] + '" alt="' + this.name + " " + this.type + '; ' + this.Get_Date() + '">\n' + "\n" + '	<div class="grid">\n' + '		<p>Name: '  +  this.name + '</p>\n' + '		<p>Type: ' + this.type + '</p>\n' + '		<p>Medium: ' + this.medium + '</p>\n' + '		<p>Role(s): ' + this.roles + '</p>\n' + '		<p>Date: ' + this.Get_Date() + '</p>\n' + '	</div>\n' + '</a></section>';
 
@@ -181,7 +181,7 @@ async function Populate_Carousels(data,type,featured) {
         let current_carousel = [];
         console.log(type)
         for (i in data) {
-            console.log(!data[i].type.includes("Game"))
+            console.log(!data[i].type.includes("Game") && !data[i].type.includes("Art"))
             if (type == "Game" && data[i].type.includes("Game")) {
                 current_carousel.push(data[i]);
 
