@@ -2,18 +2,32 @@
 let Project_Name_List = ["Forsaken Seas","Hex-okles","Rubber Run","Cargethal","Deus Ex Magica","Fringe Flayer","Grinning Order Cultist","Terraria Boss Remix","Zavel","Watty Vandalisim","Loop Apocolypse"];
 let  Projects = [];
 
+
 for (i in Project_Name_List) {
     Project_Name_List[i] = "https://imaginary-quiver.github.io/CTK301/Portfolio/Projects/" + Project_Name_List[i] + ".txt"
 }
 
+const Section_Types = new Map([
+    ["title_section",".ts"],
+    ["header_section",".hs"],
+    ["text_section", ".txts"],
+    ["image_left_text_section", ".ilts"],
+    ["image_right_text_section", ".irts"],
+    ["video_left_text_section", ".vlts"],
+    ["video_right_text_section", ".vrts"],
+    ["audio_left_text_section",".alts"],
+    ["audio_right_text_section",".arts"]
+]);
 
+function Get_Section(value) {
+    for (const [key, val] of Section_Types.entries()) {
+        if (val === value) {
+            return key; // Return the key if the value matches
+        }
+    }
+    return null; // Return null if the value is not found
+}
 
-
-const Content_Types = Object.freeze({
-    Text_Section: 0,
-    Image_Left_Text_Section: 1,
-    Image_Right_Text_Section: 2,
-});
 
 class Project {
     name = "";
@@ -45,13 +59,19 @@ class Project {
         return `${month}/${day}/${year}`; // Construct the formatted date string
     }
 
+    Get_Link(){
+        let link = `Project_Page.html?project=${this.name.replaceAll(" ","_")}`;
+
+        return link
+    }
+
     Generate_Carousel(index,selected=true) {
         let carousel = "";
         
         if (selected) {
-            carousel = '<div class="f-carousel__slide is-selected" data-index="' + index + '">\n    <a href="#">\n  <img src="' + this.images[0] + '" alt="' + this.name + " " + this.type + '; ' + this.Get_Date() + '">\n</a>\n</div>';
+            carousel = `<div class="f-carousel__slide is-selected" data-index="${index}">\n    <a href="${this.Get_Link()}">\n  <img src="${this.images[0]}" alt="${this.name} ${this.type}; ${this.Get_Date()}">\n</a>\n</div>`;
         } else {
-            carousel = '<div class="f-carousel__slide" data-index="' + index + '">\n    <a href="#">\n  <img src="' + this.images[0] + '" alt="' + this.name + " " + this.type + '; ' + this.Get_Date() + '">\n</a>\n</div>';
+            carousel = `<div class="f-carousel__slide" data-index="${index}">\n    <a href="${this.Get_Link()}">\n  <img src="${this.images[0]}" alt="${this.name} ${this.type}; ${this.Get_Date()}">\n</a>\n</div>`;
         }
         
         
@@ -66,15 +86,15 @@ class Project {
         
         if (this.type.includes("Game")) {
 
-            listing = '<section class="text_section project_listing"><a href="#">\n'+ "\n" + '	<img src="' + this.images[0] + '" alt="' + this.name + " " + this.type + '; ' + this.Get_Date() + '">\n' + "\n" + '	<div class="grid">\n' + '		<p>Game: '  +  this.name + '</p>\n' + '		<p>Type: ' + this.type + '</p>\n' + '		<p>Genres: ' + this.genres + '</p>\n' + '		<p>Role(s): ' + this.roles + '</p>\n' + '		<p>Date: ' + this.Get_Date() + '</p>\n' + '	</div>\n' + '</a></section>';
+            listing = `<section class="text_section project_listing"><a href="${this.Get_Link()}">\n\n  <img src="${this.images[0]}" alt="${this.name} ${this.type}; ${this.Get_Date()}">\n\n	<div class="grid">\n		<p>Game: ${this.name}</p>\n		<p>Type: ${this.type}</p>\n		<p class="Genres">Genres: ${this.genres}</p>\n		<p>Role(s): ${this.roles}</p>\n		<p>Date: ${this.Get_Date()}</p>\n	</div>\n    </a></section>`;
 
         }else if (this.type.includes("Art")) {
             
-            listing = '<section class="text_section project_listing"><a href="#">\n'+ "\n" + '	<img src="' + this.images[0] + '" alt="' + this.name + " " + this.type + '; ' + this.Get_Date() + '">\n' + "\n" + '	<div class="grid">\n' + '		<p>Name: '  +  this.name + '</p>\n' + '		<p>Type: ' + this.type + '</p>\n' + '		<p>Medium: ' + this.medium + '</p>\n' + '		<p>Date: ' + this.Get_Date() + '</p>\n' + '	</div>\n' + '</a></section>';
+            listing = `<section class="text_section project_listing"><a href="${this.Get_Link()}">\n\n  <img src="${this.images[0]}" alt="${this.name} ${this.type}; ${this.Get_Date()}">\n\n	<div class="grid">\n		<p>Name: ${this.name}</p>\n		<p>Type: ${this.type}</p>\n		<p>Medium: ${this.medium}</p>\n		<p>Date: ${this.Get_Date()}</p>\n	</div>\n</a></section>`;
 
         } else if (type == "Misc"){
             
-            listing = '<section class="text_section project_listing"><a href="#">\n'+ "\n" + '	<img src="' + this.images[0] + '" alt="' + this.name + " " + this.type + '; ' + this.Get_Date() + '">\n' + "\n" + '	<div class="grid">\n' + '		<p>Name: '  +  this.name + '</p>\n' + '		<p>Type: ' + this.type + '</p>\n' + '		<p>Medium: ' + this.medium + '</p>\n' + '		<p>Role(s): ' + this.roles + '</p>\n' + '		<p>Date: ' + this.Get_Date() + '</p>\n' + '	</div>\n' + '</a></section>';
+            listing = `<section class="text_section project_listing"><a href="${this.Get_Link()}">\n\n  <img src="${this.images[0]}" alt="${this.name} ${this.type}; ${this.Get_Date()}">\n\n	<div class="grid">\n		<p>Name: ${this.name}</p>\n		<p>Type: ${this.type}</p>\n		<p>Medium: ${this.medium}</p>\n		<p>Role(s): ${this.roles}</p>\n		<p>Date: ${this.Get_Date()}</p>\n	</div>\n</a></section>`;
 
         };
 
@@ -82,7 +102,27 @@ class Project {
         return listing
     }
 
-    
+    Generate_Heading() {
+        let Heading = ""
+
+        
+        if (this.type.includes("Game")) {
+            
+            Heading = `<section class="header_section">\n\n	<div class="grid">\n		<p class="span3">Type: ${this.type}</p>\n		<p class="span3">Date: ${this.Get_Date()}</p>\n		<p class="span6">Role(s): ${this.roles}</p>\n		<p class="span12">Genres: ${this.genres}</p>\n    	</div>\n</a></section>`;
+
+        }else if (this.type.includes("Art")) {
+            
+            Heading = `<section class="header_section">\n\n	<div class="grid">\n		<p class="span3">Type: ${this.type}</p>\n		<p class="span6">Medium: ${this.medium}</p>\n		<p class="span3">Date: ${this.Get_Date()}</p>\n	</div>\n</a></section>`;
+
+        } else if (!this.type.includes("Game") && !this.type.includes("Art")){
+            
+            Heading = `<section class="header_section">\n\n	<div class="grid">\n		<p class="span3">Type: ${this.type}</p>\n		<p class="span6">Medium: ${this.medium}</p>\n		<p class="span6">Role(s): ${this.roles}</p>\n		<p class="span3">Date: ${this.Get_Date()}</p>\n	</div>\n</a></section>`;
+
+        };
+
+
+        return Heading
+    } 
 };
 
 
@@ -156,20 +196,13 @@ async function Populate_Listings(data,type) {
 
         let parent = document.getElementById('Project_List');
         
-        parent.innerHTML = '<h2 class="spectral-bold padding-seventy-two">Games</h2>\n\n' + new_listings.join('\n');
+        parent.innerHTML = `<h2 class="spectral-bold padding-seventy-two">Games</h2>\n\n${new_listings.join('\n')}`;
 
     } else {
         console.log("No data to process.");
     }
 }
 
-
-async function Create_Carousel(callback) {
-    const container1 = document.getElementById("recent-projects-carousel");
-    const options1 = {Dots: false, Navigation : {} ,infinite: false, slidesPerPage: 5};
-    await new Carousel(container1, options1);
-    callback(created=true);
-};
 
 
 
@@ -179,9 +212,9 @@ async function Create_Carousel(callback) {
 async function Populate_Carousels(data,type,featured) {
     if (data) {// Ensure that data is available before processing
         let current_carousel = [];
-        console.log(type)
+
         for (i in data) {
-            console.log(!data[i].type.includes("Game") && !data[i].type.includes("Art"))
+
             if (type == "Game" && data[i].type.includes("Game")) {
                 current_carousel.push(data[i]);
 
@@ -190,13 +223,13 @@ async function Populate_Carousels(data,type,featured) {
 
             } else if (type == "Misc" && !data[i].type.includes("Game") && !data[i].type.includes("Art")) {
                 current_carousel.push(data[i]);
-                console.log(data[i]);
+                
             } else if (type == "All") {
                 current_carousel.push(data[i]);
             };
         };
         
-        console.log(current_carousel);
+        
         current_carousel.sort((a, b) => b.date - a.date);
         current_carousel.splice(10);
 
@@ -283,17 +316,134 @@ async function Populate_Carousels(data,type,featured) {
 }
 
 
+
+
+
+async function Populate_Project_Page(data) {
+    
+    if (data) {// Ensure that data is available before processing
+        let project = Get_Project_From_URL().replaceAll("_"," ");
+
+        let current_project = "";
+        
+        for (i in data) {
+            if (data[i].name == project){
+                current_project = data[i]
+            };
+        };
+
+
+        let project_content = current_project.content.split("\n"); //get content as array of strings for each line
+
+        project_content = project_content.filter(item => item.trim() !== ""); // remove all blank lines
+
+        let content_sections = [];
+        let html_sections = [];
+
+        for (i in project_content){
+            if (Get_Section(project_content[i]) != null){
+                content_sections.push([Get_Section(project_content[i]),[]]);
+            } else if ( Get_Section(project_content[i]) == null) {
+                content_sections[content_sections.length-1][1].push(project_content[i]);
+            } else {
+                console.log("Project Content Error");
+            };
+            
+        };
+        
+
+        for (i in content_sections){
+            let html = "";
+            if (content_sections[i][0] == "title_section") {
+                html = `<section class="title_section">\n    <h2>${content_sections[i][1][0]}</h2>\n   </section>`;
+
+            } else if (content_sections[i][0] == "header_section") {
+                html = `<section class="header_section">\n    <h3>${content_sections[i][1][0]}</h3>\n   </section>`;
+
+            } else if (content_sections[i][0] == "text_section") {
+                html = `<section class="text_section">\n    <p>${content_sections[i][1].join("\n")}</p>\n   </section>`;
+
+            } else if (content_sections[i][0] == "image_left_text_section") {
+                let img = content_sections[i][1][0];
+                content_sections = content_sections[i][1].splice(0,1);
+
+                html = `<section class="image_left_text_section">\n    <img src="${img}" alt="${img.substring(img.lastIndexOf("/")+1)}">\n   <p>${content_sections[i][1].join("\n")}</p>\n   </section>`;
+
+            } else if (content_sections[i][0] == "image_right_text_section") {
+                let img = content_sections[i][1][0];
+                content_sections = content_sections[i][1].splice(0,1);
+
+                html = `<section class="image_right_text_section">\n    <p>${content_sections[i][1].join("\n")}</p>\n   <img src="${img}" alt="${img.substring(img.lastIndexOf("/")+1)}">\n   </section>`;
+
+            } else if (content_sections[i][0] == "video_left_text_section") {
+                let video = content_sections[i][1][0];
+                content_sections[i][1].splice(0,1);
+
+
+                html = `<section class="video_left_text_section">\n    <video autoplay controls loop preload="auto" >\n     <source src="${video}" type="video/mp4">\n    </video>\n   <p>${content_sections[i][1].join("\n")}</p>\n   </section>`;
+
+            } else if (content_sections[i][0] == "video_right_text_section") {
+                let video = content_sections[i][1][0];
+                content_sections = content_sections[i][1].splice(0,1);
+
+                html = `<section class="video_right_text_section">\n    <p>${content_sections[i][1].join("\n")}</p>\n   <video autoplay controls loop preload="auto" >\n     <source src="${video}" type="video/mp4">\n    </video>\n   </section>`;
+
+            } else if (content_sections[i][0] == "audio_left_text_section") {
+                let audio = content_sections[i][1][0];
+                content_sections = content_sections[i][1].splice(0,1);
+
+                html = `<section class="audio_left_text_section">\n    <audio controls autoplay >\n     <source src="${audio}" type="audio/mpeg">\n    </video>\n   <p>${content_sections[i][1].join("\n")}</p>\n   </section>`;
+
+            } else if (content_sections[i][0] == "audio_right_text_section") {
+                let audio = content_sections[i][1][0];
+                content_sections = content_sections[i][1].splice(0,1);
+
+                html = `<section class="audio_right_text_section">\n    <p>${content_sections[i][1].join("\n")}</p>\n   <audio controls autoplay >\n     <source src="${audio}" type="audio/mpeg">\n    </video>\n   </section>`;
+
+            } else {
+                console.log("Error; Incorrect Section Type");
+                html = "";
+            };
+
+
+            html_sections.push(html);
+        };
+
+
+
+
+
+
+        let parent = document.getElementById('main');
+        
+        parent.innerHTML = `<section class="title_section">\n   <h2>${current_project.name}</h2></section>\n   ${current_project.Generate_Heading()}\n ${html_sections.join("\n")}`;
+
+    } else {
+        console.log("No data to process.");
+    };
+};
+
+
+
+
+
+
+
+
+
 async function Execute_Listings(type,mode=0,featured=false) {
     try {
-        const data = await Gather_Projects(); // Wait for gather projects to complete
+        const data = await Gather_Projects();                       // Wait for gather projects to complete
 
-        if (mode == 1){ //Listings only
-            await Populate_Listings(data,type);         // Wait for test to complete
-        } else if (mode == 2){ //Carousels only
-            await Populate_Carousels(data,type,featured);         // Wait for test to complete
-        } else { // Default to both
-            await Populate_Listings(data,type);         // Wait for test to complete
-            await Populate_Carousels(data,type,featured);         // Wait for test to complete
+        if (mode == 1){                                             // Listings only
+            await Populate_Listings(data,type);                     // Wait for Listings to complete
+        } else if (mode == 2){                                      // Carousels only
+            await Populate_Carousels(data,type,featured);           // Wait for Carousels to complete
+        }else if (mode == 3){                                       // Project Page
+            await Populate_Project_Page(data);                      // Wait for Project Page to complete
+        } else {                                                    // Default to both
+            await Populate_Listings(data,type);                     // Wait for Listings to complete
+            await Populate_Carousels(data,type,featured);           // Wait for Carousels to complete
         };
 
 
@@ -313,4 +463,19 @@ function shuffleArray(array) {
         [array[i], array[j]] = [array[j], array[i]];
     }
     return array; // Return the shuffled array
-}
+};
+
+
+
+function Get_Project_From_URL() {
+    const url = new URL(window.location.href); // Get the current URL
+    const params = new URLSearchParams(url.search); // Create a URLSearchParams object
+
+    // Get specific parameters
+    const project = params.get('project'); // Get the value of 'project'
+
+    
+    return project // Return the project
+};
+
+

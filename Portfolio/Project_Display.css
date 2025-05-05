@@ -6,7 +6,25 @@
 .project_listing{
     margin: 2em 0;
     padding: 0 0 0 72px;
+    width: auto;
+    border-radius: 8px;
+    overflow: visible; /* Ensures the content doesn't overflow */
+    transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smooth transition for scaling and shadow */
 }
+
+.project_listing a {
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit text color */
+    display: block; /* Make the entire section clickable */
+}
+
+.project_listing a:hover {
+    transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smooth transition for transform and filter */
+    transform: scale(1.05); /* Scale up the image */
+    box-shadow: 0 0px 10px rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+
 
 .project_listing a{
     display: flex;
@@ -18,7 +36,6 @@
 .project_listing img {
     margin: auto 1em auto 0;
     border-radius: 10px;
-    width: 191px;
     height: 126px;
 }
 
@@ -43,14 +60,177 @@
 
 
 
+/*  ----------------------  Section Styles  ----------------------  */
+.span12 {
+    grid-column: span 12;
+    text-align: center;
+}
+
+.span8 {
+    grid-column: span 8;
+    text-align: center;
+}
+
+.span6 {
+    grid-column: span 6;
+    text-align: center;
+}
+
+.span4 {
+    grid-column: span 4;
+    text-align: center;
+}
+
+.span3 {
+    grid-column: span 3;
+    text-align: center;
+}
 
 
 
 
+main .header_section div {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-column-gap: 30px;
+    grid-row-gap: 10px;
+}
+
+
+.title_section {
+    padding: 0 72px 0 72px;
+    font-size: 30px;
+    font-family: "Spectral", serif;
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+}
+
+.header_section {
+    padding: 0 72px 0 72px;
+    font-size: 24px;
+    font-family: "Spectral", serif;
+    font-weight: 700;
+    font-style: normal;
+    text-align: left;
+}
+
+.text_section {
+    padding: 0 72px 0 72px;
+    font-size: 20px;
+    font-family: "Spectral", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: left;
+}
 
 
 
+.image_left_text_section {
+    padding: 0 72px 0 72px;
+    font-size: 20px;
+    font-family: "Spectral", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: left;
+    display: flex;
+    }
+    .image_left_text_section img {
+        width: 600px;
+    }
+    .image_left_text_section p {
+        margin: 0;
+        margin-left: 24px;
+}
+
+.image_right_text_section {
+    padding: 0 72px 0 72px;
+    font-size: 20px;
+    font-family: "Spectral", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: left;
+    display: flex;
+    }
+    .image_right_text_section img {
+        width: 600px;
+    }
+    .image_right_text_section p {
+        margin: 0;
+        margin-right: 24px;
+}
 
 
 
+.video_left_text_section {
+    padding: 0 72px 0 72px;
+    font-size: 20px;
+    font-family: "Spectral", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: left;
+    display: flex;
+    }
+    .video_left_text_section video {
+        width: 384px;
+    }
+    .video_left_text_section p {
+        margin: 0;
+        margin-left: 24px;
+}
+
+.video_right_text_section {
+    padding: 0 72px 0 72px;
+    font-size: 20px;
+    font-family: "Spectral", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: left;
+    display: flex;
+    }
+    .video_right_text_section video {
+        width: 384px;
+    }
+    .video_right_text_section p {
+        margin: 0;
+        margin-right: 24px;
+}
+
+
+
+.audio_left_text_section {
+    padding: 0 72px 0 72px;
+    font-size: 20px;
+    font-family: "Spectral", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: left;
+    display: flex;
+    }
+    .audio_left_text_section audio {
+        width: 384px;
+    }
+    .audio_left_text_section p {
+        margin: 0;
+        margin-left: 24px;
+}
+
+.audio_right_text_section {
+    padding: 0 72px 0 72px;
+    font-size: 20px;
+    font-family: "Spectral", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: left;
+    display: flex;
+    }
+    .audio_right_text_section audio {
+        width: 384px;
+    }
+    .audio_right_text_section p {
+        margin: 0;
+        margin-right: 24px;
+}
 

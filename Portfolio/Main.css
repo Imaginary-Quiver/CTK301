@@ -145,26 +145,30 @@ main section {
   --f-button-svg-stroke-width: 10;
 }
 
-.f-carousel img {
-  width: 191px;
-  height: 126px;
-}
-
 .button_img {
   z-index: -1;
   position: relative;
   pointer-events: none;
 }
 
-#myCarousel .f-carousel__slide {
-  text-align: center;
-  padding: auto;
-  background: #eee;
+
+.f-carousel__viewport {
+  width: 1055px;
+  overflow: hidden;
 }
 
 .f-carousel img {
-  width: calc(100%);
+  height: 126px;
+  transition: border 0.25 ease; /* Smooth transition for transform and filter */
+  border: 3px transparent #FFF;
+  border-radius: 10px;
 }
+.f-carousel img:hover {
+  transition: border 0.25s ease; /* Smooth transition for transform and filter */
+  border: 3px solid #FFF;
+  border-radius: 10px;
+}
+
 
 .project_sample img {
   border-radius: 10px;
@@ -181,10 +185,6 @@ main section {
 .left_margin {
   margin: 0;
   margin-left: 12px;
-}
-
-video {
-  padding: 0 0 130px 0;
 }
 
 
