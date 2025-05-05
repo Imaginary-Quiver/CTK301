@@ -397,15 +397,16 @@ async function Populate_Project_Page(data) {
 
             } else if (content_sections[i][0] == "audio_left_text_section") {
                 let audio = content_sections[i][1][0];
+                
                 content_sections[i][1].splice(0,1);
-
-                html = `<section class="audio_left_text_section">\n    <audio controls autoplay >\n     <source src="${audio}" type="audio/mpeg">\n    </video>\n   <p> ${content_sections[i][1].join("\n")}</p>\n   </section>`;
+                console.log(content_sections[i][1])
+                html = `<section class="audio_left_text_section">\n    <audio controls autoplay >\n     <source src="${audio}" type="audio/mpeg">\n    </audio>\n   <p> ${content_sections[i][1].join("\n")}</p>\n   </section>`;
 
             } else if (content_sections[i][0] == "audio_right_text_section") {
                 let audio = content_sections[i][1][0];
                 content_sections[i][1].splice(0,1);
 
-                html = `<section class="audio_right_text_section">\n    <p> ${content_sections[i][1].join("\n")}</p>\n   <audio controls autoplay >\n     <source src="${audio}" type="audio/mpeg">\n    </video>\n   </section>`;
+                html = `<section class="audio_right_text_section">\n    <p> ${content_sections[i][1].join("\n")}</p>\n   <audio controls autoplay >\n     <source src="${audio}" type="audio/mpeg">\n    </audio>\n   </section>`;
 
             } else {
                 console.log("Error; Incorrect Section Type");
