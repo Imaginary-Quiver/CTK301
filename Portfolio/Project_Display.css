@@ -126,7 +126,33 @@ main .header_section div {
     text-align: left;
 }
 
-
+.link_section {
+    padding: 0 72px 0 72px;
+    font-size: 20px;
+    font-family: "Spectral", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    color: rgb(8, 189, 209);
+    text-decoration: none;
+}
+.link_section a{
+    font-size: 20px;
+    font-family: "Spectral", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: left;
+    color: rgb(8, 189, 209);
+    text-decoration: none;
+}
+.link_section a:hover{
+    font-weight: 400;
+    text-align: left;
+    transition: transform 0.25s ease, box-shadow 0.25s ease; /* Smooth transition for transform and filter */
+    transform: scale(1.05); /* Scale up the image */
+    box-shadow: 0 0px 10px rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
 
 .image_left_text_section {
     padding: 0 72px 0 72px;
@@ -139,6 +165,7 @@ main .header_section div {
     }
     .image_left_text_section img {
         width: 600px;
+        height: fit-content;
     }
     .image_left_text_section p {
         margin: 0;
@@ -156,6 +183,7 @@ main .header_section div {
     }
     .image_right_text_section img {
         width: 600px;
+        height: fit-content;
     }
     .image_right_text_section p {
         margin: 0;
@@ -175,6 +203,7 @@ main .header_section div {
     }
     .video_left_text_section video {
         width: 384px;
+        height: fit-content;
     }
     .video_left_text_section p {
         margin: 0;
@@ -192,6 +221,7 @@ main .header_section div {
     }
     .video_right_text_section video {
         width: 384px;
+        height: fit-content;
     }
     .video_right_text_section p {
         margin: 0;
