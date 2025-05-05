@@ -5,8 +5,6 @@ Adobe Photoshop
 
 03/04/25
 Media/Art_Project_Images/Cargethal V1.png
-.ts
-A fallen alchemist.
 .hs
 About Me
 .vlts
