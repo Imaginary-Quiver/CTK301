@@ -362,7 +362,7 @@ async function Populate_Project_Page(data) {
                 html = `<section class="header_section">\n    <h3>${content_sections[i][1][0]}</h3>\n   </section>`;
 
             } else if (content_sections[i][0] == "text_section") {
-                html = `<section class="text_section">\n    <p>${content_sections[i][1].join("\n")}</p>\n   </section>`;
+                html = `<section class="text_section">\n    <p> ${content_sections[i][1].join("\n")}</p>\n   </section>`;
 
             } else if (content_sections[i][0] == "link_section") {
                 let link = content_sections[i][1][0];
@@ -374,38 +374,38 @@ async function Populate_Project_Page(data) {
                 let img = content_sections[i][1][0];
                 content_sections[i][1].splice(0,1);
 
-                html = `<section class="image_left_text_section">\n    <img src="${img}" alt="${img.substring(img.lastIndexOf("/")+1)}">\n   <p>${content_sections[i][1].join("\n")}</p>\n   </section>`;
+                html = `<section class="image_left_text_section">\n    <img src="${img}" alt="${img.substring(img.lastIndexOf("/")+1)}">\n   <p>    ${content_sections[i][1].join("\n")}</p>\n   </section>`;
 
             } else if (content_sections[i][0] == "image_right_text_section") {
                 let img = content_sections[i][1][0];
                 
                 content_sections[i][1].splice(0,1);
-                html = `<section class="image_right_text_section">\n    <p>${content_sections[i][1].join("\n")}</p>\n   <img src="${img}" alt="${img.substring(img.lastIndexOf("/")+1)}">\n   </section>`;
+                html = `<section class="image_right_text_section">\n    <p> ${content_sections[i][1].join("\n")}</p>\n   <img src="${img}" alt="${img.substring(img.lastIndexOf("/")+1)}">\n   </section>`;
 
             } else if (content_sections[i][0] == "video_left_text_section") {
                 let video = content_sections[i][1][0];
                 content_sections[i][1].splice(0,1);
 
 
-                html = `<section class="video_left_text_section">\n    <video autoplay controls loop preload="auto" >\n     <source src="${video}" type="video/mp4">\n    </video>\n   <p>${content_sections[i][1].join("\n")}</p>\n   </section>`;
+                html = `<section class="video_left_text_section">\n    <video autoplay controls loop preload="auto" >\n     <source src="${video}" type="video/mp4">\n    </video>\n   <p>  ${content_sections[i][1].join("\n")}</p>\n   </section>`;
 
             } else if (content_sections[i][0] == "video_right_text_section") {
                 let video = content_sections[i][1][0];
                 content_sections[i][1].splice(0,1);
 
-                html = `<section class="video_right_text_section">\n    <p>${content_sections[i][1].join("\n")}</p>\n   <video autoplay controls loop preload="auto" >\n     <source src="${video}" type="video/mp4">\n    </video>\n   </section>`;
+                html = `<section class="video_right_text_section">\n    <p> ${content_sections[i][1].join("\n")}</p>\n   <video autoplay controls loop preload="auto" >\n     <source src="${video}" type="video/mp4">\n    </video>\n   </section>`;
 
             } else if (content_sections[i][0] == "audio_left_text_section") {
                 let audio = content_sections[i][1][0];
                 content_sections[i][1].splice(0,1);
 
-                html = `<section class="audio_left_text_section">\n    <audio controls autoplay >\n     <source src="${audio}" type="audio/mpeg">\n    </video>\n   <p>${content_sections[i][1].join("\n")}</p>\n   </section>`;
+                html = `<section class="audio_left_text_section">\n    <audio controls autoplay >\n     <source src="${audio}" type="audio/mpeg">\n    </video>\n   <p> ${content_sections[i][1].join("\n")}</p>\n   </section>`;
 
             } else if (content_sections[i][0] == "audio_right_text_section") {
                 let audio = content_sections[i][1][0];
                 content_sections[i][1].splice(0,1);
 
-                html = `<section class="audio_right_text_section">\n    <p>${content_sections[i][1].join("\n")}</p>\n   <audio controls autoplay >\n     <source src="${audio}" type="audio/mpeg">\n    </video>\n   </section>`;
+                html = `<section class="audio_right_text_section">\n    <p> ${content_sections[i][1].join("\n")}</p>\n   <audio controls autoplay >\n     <source src="${audio}" type="audio/mpeg">\n    </video>\n   </section>`;
 
             } else {
                 console.log("Error; Incorrect Section Type");
