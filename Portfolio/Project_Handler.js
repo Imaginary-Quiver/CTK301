@@ -11,6 +11,7 @@ const Section_Types = new Map([
     ["title_section",".ts"],
     ["header_section",".hs"],
     ["text_section", ".txts"],
+    ["link_section", ".lnks"],
     ["image_left_text_section", ".ilts"],
     ["image_right_text_section", ".irts"],
     ["video_left_text_section", ".vlts"],
@@ -362,6 +363,12 @@ async function Populate_Project_Page(data) {
 
             } else if (content_sections[i][0] == "text_section") {
                 html = `<section class="text_section">\n    <p>${content_sections[i][1].join("\n")}</p>\n   </section>`;
+
+            } else if (content_sections[i][0] == "link_section") {
+                let link = content_sections[i][1][0];
+                content_sections = content_sections[i][1].splice(0,1);
+
+                html = `<section class="link_section">\n    <p><a href="${link}">${content_sections[i][1].join("\n")}<a></p>\n   </section>`;
 
             } else if (content_sections[i][0] == "image_left_text_section") {
                 let img = content_sections[i][1][0];

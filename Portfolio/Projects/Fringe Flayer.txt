@@ -5,4 +5,12 @@ Adobe Photoshop
 
 09/14/22
 Media/Art_Project_Images/Fringe Flayer.png
-A deep sea monster who uses spacial magic.
+.hs
+A Monster of Sea and Space
+.txts
+One of my earlier finished digital works, the Fringe Flayer, was a monster initially made for Dungeons and Dragons but has since taken on a life of its own as my best monster design. I've always had a fascination with monster art, and most of my work in childhood reflected that. The idea behind this creature is that when traveling over a dangerous ocean, most would find themselves looking down into the water, not up. While this creature is aquatic, it has the magical ability to create small portals from which it could drag passengers off ships with its long neck. Something a lot of simple monster art lacks is a general reason why the creature is scary other than it being so. By building a creature around what makes it scary, instead of adding it after the fact, it allows it to take on that role more naturally. 
+.hs
+The Process
+.ilts
+Media/Art_Project_Images/Fringe Flayer.png
+When it comes to the actual design process, I started with the body of a plesiosaur with spikes. I remember looking up photos of creepy fish, eels, and bobbit worms. From there, I designed the head and tail in the background. After that, I decided on a color scheme that would allow the monster to blend in with the water, keeping to blues and teals. Then, to make the mouth pop and follow the logic that bright animals are more dangerous, I made the mouth yellow and orange and gave the fins orange highlights.

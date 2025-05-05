@@ -6,11 +6,11 @@ Adobe Photoshop
 03/04/25
 Media/Art_Project_Images/Cargethal V1.png
 .hs
-About Me
-.vlts
-Media/Videos/Video.mp4
-I am a Game Design Major with a pentient for programming and Art. I have been drawing since I was 5 and have worked with digital art since I was 12. I know 7 programming languages, including Python, Java, Java Script, and HTML. I have a passion for games and have been modding games such as Minecraft since 2020. I have also written my own 162 page TTRPG.
-.hs
-Work With Me
+A Failed Alchemist
 .txts
-If you find yourself intrested in the work I do, then give me a shout. You can mainly contact me through my e-mail. You can also checkout my Youtube channel where I post updates on personal projects.
+Cargethal is a Dungeons and Dragons character I played in a friend's campaign. His whole character arc is about a failed alchemist who is struggling with substance abuse. When designing him I wanted to make a very flawed character who could change for the better over the story he was played in. So I made him callous, materialistic, and have a clinical detachment from almost everything around him. His substance abuse comes from the need to drown out his failure and lack of understanding when it comes to basic human emotions.
+.hs
+The Design Process
+.irts
+Media/Art_Project_Images/Cargethal V1.png
+When designing his character I took a lot of inspiration from Arcane's Silco. His color palette was decided fairly early on in the design process as I knew I wanted it to be primarily putrid greens with a hint of pinkish-purple. On the actual design of his appearance, I made him emaciated to drive how the substance abuse and gave him various scaring to show past alchemical experiments. His glasses were designed in a bid to recreate that 60s or 80s hippie look with the colored glasses. I made them broken and cracked to hint at his continuous emotional state and to highlight his right eye which was scarred in a particularly notable accident. All in all, it only took around 3-4 hours to complete the simple bust of Cargethal, but I do plan to draw a revised full-character version in the future.

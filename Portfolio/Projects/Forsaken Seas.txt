@@ -5,13 +5,4 @@ Action, Adventure, Narrative, Puzzle, Stratagey, Pirates
 Everything other than Character Art
 12/13/24
 Media/Game_Project_Images/Forsaken Seas Thumbnail.png
-.hs
-About Me
-.vlts
-Media/Videos/Video.mp4
-I am a Game Design Major with a pentient for programming and Art. I have been drawing since I was 5 and have worked with digital art since I was 12. I know 7 programming languages, including Python, Java, Java Script, and HTML. I have a passion for games and have been modding games such as Minecraft since 2020. I have also written my own 162 page TTRPG.
-.hs
-Work With Me
-.txts
-If you find yourself intrested in the work I do, then give me a shout. You can mainly contact me through my e-mail. You can also checkout my Youtube channel where I post updates on personal projects.
 Pirates!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
