@@ -11,7 +11,7 @@ A Simple Start
 Forsaken Seas was my Narrative Game Project and Final Printed Project for my CTK 351 Game Design 1 class. I was greatly inspired by Pirates of The Carribean while making this and really wanted to make a ship combat game. So the idea for Forsaken Seas was born. Over the next week I contructed a rudementary prototype to test mechanichs and get some basic rules. After testing the combat with my teacher, it received high praise for a prototype, and I got good feedback on what to change. After that I wrote the rules for the main portion of the game concerning story encounters and winning.
 .hs
 Crossing an Ocean
-.Ilts
+.ilts
 After the prototype was tested and the rules were ready, it was time to cross an ocean, methaphorically speaking at least. This was the hardes part of the process as I had to go through and make hundreds of art assets for the game. With 6 different decks for cards and many different tokens to design, I had my work cut out for me. That was also no including the many ships and cargo I needed to make for the game's tetris style inventory system. It took me 2 weeks and an all nighter, but I got it done in time. I really have to thank Olivia Gouge, my Girlfriend, for helping with all the art for the over 25 different crewmates. Without her, I would have never finished this project on time, or with the level of deatail it holds.
 .hs
 A Bitter Sweet End
