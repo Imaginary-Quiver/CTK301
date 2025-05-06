@@ -399,7 +399,6 @@ async function Populate_Project_Page(data) {
                 let audio = content_sections[i][1][0];
                 
                 content_sections[i][1].splice(0,1);
-                console.log(content_sections[i][1])
                 html = `<section class="audio_left_text_section">\n    <audio controls autoplay >\n     <source src="${audio}" type="audio/mpeg">\n    </audio>\n   <p> ${content_sections[i][1].join("\n")}</p>\n   </section>`;
 
             } else if (content_sections[i][0] == "audio_right_text_section") {
