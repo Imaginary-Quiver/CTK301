@@ -12,6 +12,7 @@ Forsaken Seas was my Narrative Game Project and Final Printed Project for my CTK
 .hs
 Crossing an Ocean
 .ilts
+Media/Game_Project_Images/Forsaken Seas Thumbnail.png
 After the prototype was tested and the rules were ready, it was time to cross an ocean, methaphorically speaking at least. This was the hardes part of the process as I had to go through and make hundreds of art assets for the game. With 6 different decks for cards and many different tokens to design, I had my work cut out for me. That was also no including the many ships and cargo I needed to make for the game's tetris style inventory system. It took me 2 weeks and an all nighter, but I got it done in time. I really have to thank Olivia Gouge, my Girlfriend, for helping with all the art for the over 25 different crewmates. Without her, I would have never finished this project on time, or with the level of deatail it holds.
 .hs
 A Bitter Sweet End
