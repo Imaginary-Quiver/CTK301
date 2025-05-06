@@ -117,7 +117,7 @@ class Project {
 
         } else if (!this.type.includes("Game") && !this.type.includes("Art")){
             
-            Heading = `<section class="header_section">\n\n	<div class="grid">\n		<p class="span3">Type: ${this.type}</p>\n		<p class="span6">Medium: ${this.medium}</p>\n		<p class="span6">Role(s): ${this.roles}</p>\n		<p class="span3">Date: ${this.Get_Date()}</p>\n	</div>\n</a></section>`;
+            Heading = `<section class="header_section">\n\n	<div class="grid">\n		<p class="span3">Type: ${this.type}</p>\n		<p class="span6">Medium: ${this.medium}</p>\n		<p class="span3">Date: ${this.Get_Date()}</p>\n		<p class="span6">Role(s): ${this.roles}</p>\n	</div>\n</a></section>`;
 
         };
 

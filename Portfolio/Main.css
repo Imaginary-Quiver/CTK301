@@ -154,18 +154,21 @@ main section {
 
 .f-carousel__viewport {
   width: 1055px;
+  height: 166px;
   overflow: hidden;
 }
 
 .f-carousel img {
+  margin: 20px;
   height: 126px;
   transition: border 0.25 ease; /* Smooth transition for transform and filter */
   border: 3px transparent #FFF;
   border-radius: 10px;
 }
 .f-carousel img:hover {
-  transition: border 0.25s ease; /* Smooth transition for transform and filter */
-  border: 3px solid #FFF;
+  transition: transform 0.33s ease, box-shadow 0.33s ease; /* Smooth transition for transform and filter */
+  transform: scale(1.1); /* Scale up the image */
+  box-shadow: 0 0px 10px rgba(255, 255, 255, 0.5);
   border-radius: 10px;
 }
 

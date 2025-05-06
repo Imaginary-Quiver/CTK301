@@ -5,4 +5,16 @@ Third Person, 3D, Platformer
 All(Solo Project)
 12/06/24
 Media/Game_Project_Images/Rubber Run Tumbnail.png
-Platform go boing boing
+.hs
+The Project
+.irts
+Media/Game_Project_Images/Rubber Run Tumbnail.png
+Rubber Run was the final project for my CTK 305 Intro to Game Engines Class. The class focused on making games in Unreal Engine 5, and likewise the final project was to create a game in it using all that we learned. I already had the Idea to make a 3d platformer with randomly generated obsticles, so Immediately got to work. I first had to get a platform spawn system working, and after a lot of trial and error, I eventually got working a system that could spawn and arange pre-made platforms based on their anchor points. With It I made 8 obsticles and sent it in for the progress showcase. Receiving great praise for the design, but also a strong urge to fix the laking visuals and to increase the number of obsticles. 
+.hs
+Final Touches
+.ilts
+Media/Game_Project_Images/Rubber Run Gameplay.png
+After the showcase I made 10 more new obsticles, each with increasing complexity that caused some of them to take multiple days to make. Then I went about fixing the problem with viusals. But, I could'nt just take the easy route of slapping some nice textures on them and being done. Instead, I created a new system that integrated with the spawn system to make every new platform spawned have a random texture from a list, and gave any spinning platform a texture that combined 2 others. This way the game looked way better, and players could see the direction of rotation. Then I overhauled the ambient environment with a detailed water object, and unique lighting with a cartoonish atmosphere. To sell home the visuals I spent the last week of development on implementing a toon shader, which gave all the objects in the game a outline. All in all, this project took me over a month of on and off work, and was a ton of fun, but also a ton of frustration to make. I can safely say that I know Unreal Engine by now, but it still feels like it hates me sometimes.
+.lnks
+https://drive.google.com/file/d/1_dCiN6FyCxyPQ_Hs77147fb-1RswFJhA/view?usp=drive_link
+You can play the game here!

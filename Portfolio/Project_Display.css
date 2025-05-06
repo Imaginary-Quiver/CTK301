@@ -240,7 +240,7 @@ main .header_section div {
     display: flex;
     }
     .audio_left_text_section audio {
-        width: 384px;
+        width: 100%;
     }
     .audio_left_text_section p {
         margin: 0;
@@ -257,7 +257,7 @@ main .header_section div {
     display: flex;
     }
     .audio_right_text_section audio {
-        width: 384px;
+        width: 100%;
     }
     .audio_right_text_section p {
         margin: 0;
